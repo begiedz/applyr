@@ -30,6 +30,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={`min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}
+				cz-shortcut-listen="true"
 			>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<SidebarProvider>
