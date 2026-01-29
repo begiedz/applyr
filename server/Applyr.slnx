@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Applyr.Api/Applyr.Api.csproj" />
+  </Folder>
+</Solution>
