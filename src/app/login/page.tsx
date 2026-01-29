@@ -1,5 +1,5 @@
 import LoginForm from "@/components/auth/login-form";
 
-export default function login() {
+export default function Page() {
 	return <LoginForm className="max-w-xl mx-auto" />;
 }
