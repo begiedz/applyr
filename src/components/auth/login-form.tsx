@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-export function LoginForm({
+export default function LoginForm({
 	className,
 	...props
 }: React.ComponentProps<"div">) {
@@ -44,22 +44,21 @@ export function LoginForm({
 							<Field>
 								<div className="flex items-center">
 									<FieldLabel htmlFor="password">Password</FieldLabel>
-									<Link
+									{/* <Link
 										href="#"
 										className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
 									>
 										Forgot your password?
-									</Link>
+									</Link> */}
 								</div>
 								<Input id="password" type="password" required />
 							</Field>
 							<Field>
 								<Button type="submit">Login</Button>
-								<Button variant="outline" type="button">
-									Login with Google
-								</Button>
+
 								<FieldDescription className="text-center">
-									Don&apos;t have an account? <Link href="#">Sign up</Link>
+									Don&apos;t have an account?{" "}
+									<Link href="/sign-up">Sign up</Link>
 								</FieldDescription>
 							</Field>
 						</FieldGroup>
