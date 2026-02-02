@@ -1,3 +1,4 @@
+using Applyr.Api.Auth;
 using Applyr.Api.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,9 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>();
+builder.Services.AddJwtAuth(builder.Configuration);
+builder.Services.AddScoped<TokenProvider>();
 
 var app = builder.Build();
 
@@ -23,6 +27,10 @@ if (app.Environment.IsDevelopment())
 
 }
 
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseHttpsRedirection();
 app.MapControllers();
+
 app.Run();

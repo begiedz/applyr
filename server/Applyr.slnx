@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/Solution Items/">
+    <File Path="../.gitignore" />
     <File Path="../docker-compose.dev.yml" />
+    <File Path="../README.MD" />
     <File Path=".dockerignore" />
   </Folder>
   <Folder Name="/src/">
